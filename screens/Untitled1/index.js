@@ -5,7 +5,9 @@ import { profileconnect_get_api_v1_profile_list } from "../../store/profileconne
 
 const Untitled1 = () => {
   const dispatch = useDispatch();
-  const profiles = useSelector(state => state.profileconnect.profiles);
+  const {
+    entities
+  } = useSelector(state => state.Profileconnect_response_get_Getprofiles);
   useEffect(() => {
     dispatch(profileconnect_get_api_v1_profile_list());
   }, []);
@@ -24,7 +26,7 @@ const Untitled1 = () => {
       position: "relative",
       flex: 1
     }}>
-        <FlatList data={profiles} renderItem={renderItem} keyExtractor={item => item.id.toString()} />
+        <FlatList data={entities} renderItem={renderItem} keyExtractor={item => item.id.toString()} />
       </ScrollView>
     </SafeAreaView>;
 };
