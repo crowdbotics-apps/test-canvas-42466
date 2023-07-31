@@ -1,11 +1,21 @@
+import { useSelector, useDispatch } from "react-redux";
 import React, { useState } from "react";
 import { StyleSheet, ScrollView, SafeAreaView, TextInput, Button, View, Text } from "react-native";
 
 const Untitled2 = () => {
+  const {
+    entities: Profileconnect_response_post_CreateProfiles
+  } = useSelector(state => state.Profileconnect_response_post_CreateProfiles);
+  const dispatch = useDispatch();
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
 
-  const handleSubmit = () => {// Handle form submission logic here
+  const handleSubmit = () => {
+    // Handle form submission logic here
+    dispatch(Profileconnect_response_post_CreateProfiles({
+      name,
+      description
+    }));
   };
 
   return <SafeAreaView style={styles.safeArea}>
@@ -19,7 +29,7 @@ const Untitled2 = () => {
           <Text style={styles.label}>Description</Text>
           <TextInput style={styles.input} placeholder="Enter a description" value={description} onChangeText={setDescription} data={[1, 2, 3]} />
         </View>
-        <Button title="Submit" onPress={handleSubmit} data={[1, 2, 3]} />
+        <Button title="Submit" onPress={handleSubmit} />
       </ScrollView>
     </SafeAreaView>;
 };
