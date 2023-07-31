@@ -39,7 +39,7 @@ const Untitled2 = () => {
         </View>
         <View style={styles.inputContainer}>
           <Text style={styles.label}>Description</Text>
-          <TextInput style={styles.input} placeholder="Enter a description" value={description} onChangeText={setDescription} data={[1, 2, 3]} />
+          <TextInput style={styles.input} placeholder="Enter a description" value="description" onChangeText={setDescription} data={[1, 2, 3]} />
         </View>
         <Button title="Submit" onPress={handleSubmit} />
         <Pressable onPress={onSubmit}>
