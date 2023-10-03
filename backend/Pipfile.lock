@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "102dd480b58dd3ff0f2409180c324bb0c1472f01c20465bfe538bc9d0e9eb4af"
+            "sha256": "c859939e8e25671271e3517e79710309bdd0a955bc1bf3d91ccf39bb2b0a21d1"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -55,10 +55,6 @@
             ],
             "markers": "python_version >= '3.7'",
             "version": "==5.3.1"
-        },
-        "cb-django-openai": {
-            "editable": true,
-            "path": "./modules/django_openai"
         },
         "certifi": {
             "hashes": [
@@ -761,11 +757,11 @@
         },
         "pipenv": {
             "hashes": [
-                "sha256:27dbf1f09007767120ab31b332fba5317328d63db916046752c8f40f38950efa",
-                "sha256:cfcda864aeb748e6e496b97f20a273477f1e8cc0a3dbb634c133acc5883582ea"
+                "sha256:0809debd75a4f8432ee10027531286c576760859653e51a103a9a9275fdac455",
+                "sha256:a07ad06655336a5d0f7c065f1dbc43d1b4c274762020c7bef18db1c694fc2637"
             ],
             "index": "pypi",
-            "version": "==2023.9.8"
+            "version": "==2023.10.3"
         },
         "pkgutil-resolve-name": {
             "hashes": [
