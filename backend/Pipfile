@@ -33,4 +33,3 @@ google-cloud-storage = "==2.9.0"
 pipenv = "*"
 django-import-export = "*"
 drf-spectacular = "~=0.26.3"
-cb-django-mailchimp = {editable = true, path = "./modules/django_mailchimp"}
