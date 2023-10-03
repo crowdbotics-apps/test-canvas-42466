@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "c859939e8e25671271e3517e79710309bdd0a955bc1bf3d91ccf39bb2b0a21d1"
+            "sha256": "4b67456da79ad67ea84aa6401775cd450ac14f71c9cfb989bee36469145942a2"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -55,6 +55,10 @@
             ],
             "markers": "python_version >= '3.7'",
             "version": "==5.3.1"
+        },
+        "cb-django-disqus": {
+            "editable": true,
+            "path": "./modules/django_disqus"
         },
         "certifi": {
             "hashes": [
