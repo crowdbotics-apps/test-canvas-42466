@@ -1,23 +1,23 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
 import { apiService } from "./api"
-export const profileconnect_post_api_v1_profile_create = createAsyncThunk(
-  "profileconnect_response_post_CreateProfiles/profileconnect_post_api_v1_profile_create",
+export const modules_openai_audio_translation_create = createAsyncThunk(
+  "createTranscriptions/modules_openai_audio_translation_create",
   async payload => {
-    const response = await apiService.profileconnect_post_api_v1_profile_create(
+    const response = await apiService.modules_openai_audio_translation_create(
       payload
     )
     return response.data
   }
 )
 const initialState = { entities: [], api: { loading: "idle", error: null } }
-const profileconnect_response_post_CreateProfilesSlice = createSlice({
-  name: "profileconnect_response_post_CreateProfiles",
+const createTranscriptionsSlice = createSlice({
+  name: "createTranscriptions",
   initialState,
   reducers: {},
   extraReducers: builder => {
     builder
       .addCase(
-        profileconnect_post_api_v1_profile_create.pending,
+        modules_openai_audio_translation_create.pending,
         (state, action) => {
           if (state.api.loading === "idle") {
             state.api.loading = "pending"
@@ -25,7 +25,7 @@ const profileconnect_response_post_CreateProfilesSlice = createSlice({
         }
       )
       .addCase(
-        profileconnect_post_api_v1_profile_create.fulfilled,
+        modules_openai_audio_translation_create.fulfilled,
         (state, action) => {
           if (state.api.loading === "pending") {
             state.entities.push(action.payload)
@@ -34,7 +34,7 @@ const profileconnect_response_post_CreateProfilesSlice = createSlice({
         }
       )
       .addCase(
-        profileconnect_post_api_v1_profile_create.rejected,
+        modules_openai_audio_translation_create.rejected,
         (state, action) => {
           if (state.api.loading === "pending") {
             state.api.error = action.error
@@ -45,6 +45,6 @@ const profileconnect_response_post_CreateProfilesSlice = createSlice({
   }
 })
 export default {
-  profileconnect_post_api_v1_profile_create,
-  slice: profileconnect_response_post_CreateProfilesSlice
+  modules_openai_audio_translation_create,
+  slice: createTranscriptionsSlice
 }
