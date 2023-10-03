@@ -32,36 +32,6 @@ function api_v1_profile_destroy(payload) {
 function api_v1_signup_create(payload) {
   return testcanvasAPI.post(`/api/v1/signup/`, payload)
 }
-function modules_openai_audio_transcription_create(payload) {
-  return testcanvasAPI.post(`/modules/openai/audio/transcription/`, payload)
-}
-function modules_openai_audio_translation_create(payload) {
-  return testcanvasAPI.post(`/modules/openai/audio/translation/`, payload)
-}
-function modules_openai_chat_completions_create(payload) {
-  return testcanvasAPI.post(`/modules/openai/chat/completions/`, payload)
-}
-function modules_openai_completion_create(payload) {
-  return testcanvasAPI.post(`/modules/openai/completion/`, payload)
-}
-function modules_openai_edits_create(payload) {
-  return testcanvasAPI.post(`/modules/openai/edits/`, payload)
-}
-function modules_openai_engines_retrieve(payload) {
-  return testcanvasAPI.get(`/modules/openai/engines/`)
-}
-function modules_openai_engines_retrieve_2(payload) {
-  return testcanvasAPI.get(`/modules/openai/engines/${payload.engine_id}/`)
-}
-function modules_openai_images_generations_create(payload) {
-  return testcanvasAPI.post(`/modules/openai/images/generations/`, payload)
-}
-function modules_openai_models_retrieve(payload) {
-  return testcanvasAPI.get(`/modules/openai/models/`)
-}
-function modules_openai_models_retrieve_2(payload) {
-  return testcanvasAPI.get(`/modules/openai/models/${payload.model_id}/`)
-}
 function rest_auth_login_create(payload) {
   return testcanvasAPI.post(`/rest-auth/login/`, payload)
 }
@@ -105,16 +75,6 @@ export const apiService = {
   api_v1_profile_partial_update,
   api_v1_profile_destroy,
   api_v1_signup_create,
-  modules_openai_audio_transcription_create,
-  modules_openai_audio_translation_create,
-  modules_openai_chat_completions_create,
-  modules_openai_completion_create,
-  modules_openai_edits_create,
-  modules_openai_engines_retrieve,
-  modules_openai_engines_retrieve_2,
-  modules_openai_images_generations_create,
-  modules_openai_models_retrieve,
-  modules_openai_models_retrieve_2,
   rest_auth_login_create,
   rest_auth_logout_retrieve,
   rest_auth_logout_create,
