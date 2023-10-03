@@ -32,33 +32,6 @@ function api_v1_profile_destroy(payload) {
 function api_v1_signup_create(payload) {
   return testcanvasAPI.post(`/api/v1/signup/`, payload)
 }
-function modules_two_factor_authentication_enable_2fa_retrieve(payload) {
-  return testcanvasAPI.get(`/modules/two-factor-authentication/enable/2fa`)
-}
-function modules_two_factor_authentication_enable_2fa_create(payload) {
-  return testcanvasAPI.post(`/modules/two-factor-authentication/enable/2fa`)
-}
-function modules_two_factor_authentication_enable_2fa_destroy(payload) {
-  return testcanvasAPI.delete(`/modules/two-factor-authentication/enable/2fa`)
-}
-function modules_two_factor_authentication_google_authenticator_qr_retrieve(
-  payload
-) {
-  return testcanvasAPI.get(
-    `/modules/two-factor-authentication/google/authenticator/qr`
-  )
-}
-function modules_two_factor_authentication_send_otp_create(payload) {
-  return testcanvasAPI.post(`/modules/two-factor-authentication/send/otp`)
-}
-function modules_two_factor_authentication_verify_otp_create(payload) {
-  return testcanvasAPI.post(`/modules/two-factor-authentication/verify/otp`)
-}
-function modules_two_factor_authentication_verify_otp_create_2(payload) {
-  return testcanvasAPI.post(
-    `/modules/two-factor-authentication/verify/otp/${payload.enable}`
-  )
-}
 function rest_auth_login_create(payload) {
   return testcanvasAPI.post(`/rest-auth/login/`, payload)
 }
@@ -102,13 +75,6 @@ export const apiService = {
   api_v1_profile_partial_update,
   api_v1_profile_destroy,
   api_v1_signup_create,
-  modules_two_factor_authentication_enable_2fa_retrieve,
-  modules_two_factor_authentication_enable_2fa_create,
-  modules_two_factor_authentication_enable_2fa_destroy,
-  modules_two_factor_authentication_google_authenticator_qr_retrieve,
-  modules_two_factor_authentication_send_otp_create,
-  modules_two_factor_authentication_verify_otp_create,
-  modules_two_factor_authentication_verify_otp_create_2,
   rest_auth_login_create,
   rest_auth_logout_retrieve,
   rest_auth_logout_create,
