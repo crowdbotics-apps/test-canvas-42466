@@ -10,9 +10,9 @@ class BuildCommand(build):
 
 
 setup(
-    name="cb_django_calendly",
+    name="cb_django_mailchimp",
     version="0.1",
-    packages=["calendly"],
-    install_requires=[],
+    packages=[],
+    install_requires=["mailchimp-marketing==3.0.80"],
     cmdclass={"build": BuildCommand},
 )
