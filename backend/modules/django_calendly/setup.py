@@ -10,9 +10,9 @@ class BuildCommand(build):
 
 
 setup(
-    name="cb_django_docusign",
+    name="cb_django_calendly",
     version="0.1",
-    packages=[],
-    install_requires=['docusign-esign == 3.19.0'],
+    packages=["calendly"],
+    install_requires=[],
     cmdclass={"build": BuildCommand},
 )
