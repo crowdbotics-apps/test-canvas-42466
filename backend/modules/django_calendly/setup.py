@@ -10,9 +10,9 @@ class BuildCommand(build):
 
 
 setup(
-    name="cb_django_booking",
+    name="cb_django_calendly",
     version="0.1",
-    packages=["booking"],
+    packages=["calendly"],
     install_requires=[],
     cmdclass={"build": BuildCommand},
 )
