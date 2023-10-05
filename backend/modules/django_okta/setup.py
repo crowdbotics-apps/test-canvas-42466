@@ -10,9 +10,9 @@ class BuildCommand(build):
 
 
 setup(
-    name="cb_django_booking",
+    name="cb_django_okta",
     version="0.1",
-    packages=["booking"],
-    install_requires=[],
+    packages=["okta"],
+    install_requires=[""],
     cmdclass={"build": BuildCommand},
 )
